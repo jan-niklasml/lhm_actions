@@ -1,4 +1,4 @@
-name: Release-actions
+name: Release actions
 on:
   push:
     branches:
