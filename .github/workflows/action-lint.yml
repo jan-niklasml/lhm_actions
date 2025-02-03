@@ -11,3 +11,4 @@ jobs:
               - uses: reviewdog/action-actionlint@v1
                 with:
                   level: info 
+                  github_token: ${{ github.token }}
