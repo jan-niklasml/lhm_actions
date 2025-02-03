@@ -1,7 +1,5 @@
 name: reviewdog
-on: 
-  push: 
-   branches: []
+on: [pull_request]
 jobs:
   actionlint:
     permissions:
