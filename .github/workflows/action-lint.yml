@@ -7,8 +7,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-              - uses: actions/checkout@v4
-              - uses: reviewdog/action-actionlint@v1
-                with:
-                  level: info 
-                  github_token: ${{ github.token }}
+       - uses: actions/checkout@v4
+       - uses: reviewdog/action-actionlint@v1
+         with:
+            reporter: github-pr-review
