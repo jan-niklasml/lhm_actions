@@ -3,38 +3,39 @@
 # LHM Actions
 
 [![Made with love by it@M][made-with-love-shield]][itm-opensource]
+
 <!-- feel free to add more shields, style 'for-the-badge' -> see https://shields.io/badges -->
 
 This repository contains and provides:
 
-* our global action definitions (mostly used in /it-at-m/refarch-templates/)
-* our workflow templates
-
+- our global action definitions (mostly used in /it-at-m/refarch-templates/)
+- our workflow templates
 
 ### Built With
 
 The documentation project is built with technologies we use in our projects:
 
-* GitHub Actions
+- GitHub Actions
 
 ## Roadmap
 
 See the [open issues](#) for a full list of proposed features (and known issues).
 
-
 ## Set up
-Feel free to use our actions in your project. 
+
+Feel free to use our actions in your project.
 
 To start with actions read the [GitHub Actions documentation](https://github.com/features/actions)
 
 ## Documentation
 
-*Coming soon:*
+_Coming soon:_
 We provide actions to
-* Build Maven projects and deploy them to Maven Central
-* Build npm projects and deploy them to npmjs
-* Build Docker images and push them to GitHub Container Registry
-* Create GitHub Releases
+
+- Build Maven projects and deploy them to Maven Central
+- Build npm projects and deploy them to npmjs
+- Build Docker images and push them to GitHub Container Registry
+- Create GitHub Releases
 
 ## Contributing
 
@@ -52,16 +53,15 @@ Don't forget to give the project a star! Thanks again!
 
 More about this in the [CODE_OF_CONDUCT](/CODE_OF_CONDUCT.md) file.
 
-
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) file for more information.
-
 
 ## Contact
 
 it@M - opensource@muenchen.de
 
 <!-- project shields / links -->
+
 [made-with-love-shield]: https://img.shields.io/badge/made%20with%20%E2%9D%A4%20by-it%40M-yellow?style=for-the-badge
 [itm-opensource]: https://opensource.muenchen.de/
