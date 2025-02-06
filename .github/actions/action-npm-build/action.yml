@@ -17,8 +17,8 @@ inputs:
     required: false
     default: 'true'
     description: Controls the execution of the 'npm run test' script
-outputs: 
-  artifact-name: 
+outputs:
+  artifact-name:
     description: "name of the artifact upload"
     value: ${{steps.artifact-name.outputs.artifact-name}}
 runs:
