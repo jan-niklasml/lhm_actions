@@ -34,7 +34,7 @@ inputs:
     required: true
     type: string
     description: env variable for token in deploy
-  GDP_PRIVATE_KEY:
+  GPG_PRIVATE_KEY:
     required: true
     type: string
     description: Value of the GPG private key to import
@@ -63,7 +63,7 @@ runs:
         server-id: "central"
         server-username: ${{ inputs.CENTRAL_USERNAME }}
         server-password: ${{ inputs.CENTRAL_PASSWORD }}
-        gpg-private-key: ${{ inputs.GDP_PRIVATE_KEY }}
+        gpg-private-key: ${{ inputs.GPG_PRIVATE_KEY }}
         gpg-passphrase: ${{ inputs.SIGN_KEY_PASS }}
     - name: Maven Release Step
       id: maven-release-step
@@ -76,7 +76,7 @@ runs:
         echo "MVN_ARTIFACT_ID=$MVN_ARTIFACT_ID" >> $GITHUB_OUTPUT
         mvn release:prepare release:perform -f .${{inputs.app-path}}/pom.xml -B -DreleaseVersion=${{ inputs.releaseVersion }} -DdevelopmentVersion=${{ inputs.developmentVersion }} -Darguments="-Dmaven.deploy.skip=${{ inputs.skipDeployment }}"
       env:
-        SIGN_KEY_PASS: ${{ inputs.GDP_PRIVATE_KEY }}
+        SIGN_KEY_PASS: ${{ inputs.GPG_PRIVATE_KEY }}
         CENTRAL_USERNAME: ${{ inputs.CENTRAL_USERNAME }}
         CENTRAL_PASSWORD: ${{ inputs.CENTRAL_PASSWORD }}
 
