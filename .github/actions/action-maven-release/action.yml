@@ -19,33 +19,33 @@ inputs:
     type: string
     description: next version with snapshot
   skipDeployment:
-     default: true
-     type: boolean
-     description: skip deployment to maven central 
+    default: true
+    type: boolean
+    description: skip deployment to maven central
   SIGN_KEY_PASS:
-     required: true
-     type: string
-     description: env variable for GPG private key passphrase
+    required: true
+    type: string
+    description: env variable for GPG private key passphrase
   CENTRAL_USERNAME:
-     required: true
-     type: string
-     description: env variable for username in deploy
+    required: true
+    type: string
+    description: env variable for username in deploy
   CENTRAL_PASSWORD:
-     required: true
-     type: string
-     description: env variable for token in deploy
+    required: true
+    type: string
+    description: env variable for token in deploy
   GDP_PRIVATE_KEY:
     required: true
     type: string
     description: Value of the GPG private key to import
-    
+
 outputs:
   MVN_ARTIFACT_ID:
     description: "artifact name from pom"
     value: ${{ steps.maven-release-step.outputs.MVN_ARTIFACT_ID }}
-  artifact-name: 
-     description: "name of the artifact upload"
-     value: ${{steps.artifact-name.outputs.artifact-name}}    
+  artifact-name:
+    description: "name of the artifact upload"
+    value: ${{steps.artifact-name.outputs.artifact-name}}
 
 runs:
   using: "composite"
@@ -54,7 +54,7 @@ runs:
     - name: Checkout code
       uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
     - name: Set up JDK
-      uses: actions/setup-java@7a6d8a8234af8eb26422e24e3006232cccaa061b # v4.6.0
+      uses: actions/setup-java@3a4f6e1af504cf6a31855fa899c6aa5355ba6c12 # v4.7.0
       with:
         java-version: ${{ inputs.java-version }}
         distribution: "temurin"
@@ -76,13 +76,13 @@ runs:
         echo "MVN_ARTIFACT_ID=$MVN_ARTIFACT_ID" >> $GITHUB_OUTPUT
         mvn release:prepare release:perform -f .${{inputs.app-path}}/pom.xml -B -DreleaseVersion=${{ inputs.releaseVersion }} -DdevelopmentVersion=${{ inputs.developmentVersion }} -Darguments="-Dmaven.deploy.skip=${{ inputs.skipDeployment }}"
       env:
-          SIGN_KEY_PASS: ${{ inputs.GDP_PRIVATE_KEY }}
-          CENTRAL_USERNAME: ${{ inputs.CENTRAL_USERNAME }}
-          CENTRAL_PASSWORD: ${{ inputs.CENTRAL_PASSWORD }}
+        SIGN_KEY_PASS: ${{ inputs.GDP_PRIVATE_KEY }}
+        CENTRAL_USERNAME: ${{ inputs.CENTRAL_USERNAME }}
+        CENTRAL_PASSWORD: ${{ inputs.CENTRAL_PASSWORD }}
 
     - id: artifact-name
       run: echo "artifact-name=${{hashFiles(format('./{0}/pom.xml', inputs.app-path))}}" >> "$GITHUB_OUTPUT"
-      shell: bash        
+      shell: bash
     - name: "Upload Artifact"
       uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
       with:
