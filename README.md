@@ -11,7 +11,7 @@ This repository contains and provides:
 - our global action definitions (mostly used in /it-at-m/refarch-templates/)
 - our workflow templates
 
-### Built With
+## Built With
 
 The documentation project is built with technologies we use in our projects:
 
@@ -19,7 +19,7 @@ The documentation project is built with technologies we use in our projects:
 
 ## Roadmap
 
-See the [open issues](#) for a full list of proposed features (and known issues).
+See the [open issues](../../issues) for a full list of proposed features (and known issues).
 
 ## Set up
 
@@ -64,4 +64,4 @@ it@M - opensource@muenchen.de
 <!-- project shields / links -->
 
 [made-with-love-shield]: https://img.shields.io/badge/made%20with%20%E2%9D%A4%20by-it%40M-yellow?style=for-the-badge
-[itm-opensource]: https://opensource.muenchen.de/
+[itm-opensource]: [Context: "https://opensource.muenchen.de/"]
