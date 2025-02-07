@@ -59,7 +59,7 @@ runs:
         java-version: ${{ inputs.java-version }}
         distribution: "temurin"
         cache: "maven"
-        cache-dependency-path: ".${{ inputs.app-path}}/pom.xml"
+        cache-dependency-path: "./${{ inputs.app-path}}/pom.xml"
         server-id: "central"
         server-username: ${{ inputs.CENTRAL_USERNAME }}
         server-password: ${{ inputs.CENTRAL_PASSWORD }}
