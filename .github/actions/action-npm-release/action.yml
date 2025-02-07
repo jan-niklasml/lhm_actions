@@ -31,10 +31,9 @@ outputs:
   ARTIFACT_NAME:
     description: "artifact name from job artifact"
     value:  ${{ steps.node.outputs.artifact-name }}
-  ARTIFACT_VERSION: 
-     description: "version of the artifact upload"
-     value: ${{steps.node-release.outputs.VERSION}}  
-
+  ARTIFACT_VERSION:
+    description: "version of the artifact upload"
+    value: ${{steps.node-release.outputs.VERSION}}
 runs:
     using: "composite"
     steps:
