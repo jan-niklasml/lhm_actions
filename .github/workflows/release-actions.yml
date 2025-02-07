@@ -2,7 +2,7 @@ name: Release actions
 on:
   push:
     branches:
-      -  main
+      - main
 
 permissions:
   contents: read # for checkout
@@ -25,12 +25,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-        
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-           npm install -g semantic-release
-           npm install -g @semantic-release/exec
-           npx semantic-release
+          npm install -g semantic-release
+          npm install -g @semantic-release/exec
+          npx semantic-release
