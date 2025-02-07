@@ -62,7 +62,7 @@ runs:
     - id: node
       uses: it-at-m/.github/.github/actions/action-npm-build@main
       with:
-        app-path:  "${{ inputs.app-path }}"
+        app-path: "${{ inputs.app-path }}"
     - if: "${{ !inputs.skip-deployment }}"
       shell: bash
       working-directory: ./${{inputs.app-path}}
