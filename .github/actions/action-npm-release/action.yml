@@ -50,14 +50,14 @@ runs:
       name: Bump version and create git tag
       working-directory: ./${{inputs.app-path}}
       run: |
-       NEW_VERSION=$(npm version ${{inputs.releaseVersion}}) || exit 1
-       echo "VERSION=$NEW_VERSION" >> "$GITHUB_OUTPUT"
-       git config --global user.email "github-actions@github.com"
-       git config --global user.name "GitHub Actions"
-       git add package.json package-lock.json
-       git commit -m "Bump version to ${NEW_VERSION}" || exit 1
-       git tag "${NEW_VERSION}" || exit 1
-       git push && git push --tags || exit 1
+        NEW_VERSION=$(npm version ${{inputs.releaseVersion}}) || exit 1
+        echo "VERSION=$NEW_VERSION" >> "$GITHUB_OUTPUT"
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git add package.json package-lock.json
+        git commit -m "Bump version to ${NEW_VERSION}" || exit 1
+        git tag "${NEW_VERSION}" || exit 1
+        git push && git push --tags || exit 1
       shell: bash
     - id: node
       uses: it-at-m/.github/.github/actions/action-npm-build@main
