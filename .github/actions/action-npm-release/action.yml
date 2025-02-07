@@ -11,21 +11,21 @@ inputs:
     type: string
     description: path where the package.json is located
   releaseVersion:
-        type: choice
-        description: "Select version increment type (follows Semantic Versioning)"
-        required: true
-        options:
-          - patch
-          - minor
-          - major    
+    type: choice
+    description: "Select version increment type (follows Semantic Versioning)"
+    required: true
+    options:
+      - patch
+      - minor
+      - major
   skip-deployment:
-     default: true
-     type: boolean
-     description: skip deployment to npm registry
-  npm-token: 
-   type: string
-   required: true
-   description: npm token for release
+    default: true
+    type: boolean
+    description: skip deployment to npm registry
+  npm-token:
+    type: string
+    required: true
+    description: npm token for release
      
 outputs:
   ARTIFACT_NAME:
