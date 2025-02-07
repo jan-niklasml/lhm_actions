@@ -8,10 +8,8 @@ inputs:
   deploy-branch:
     required: false
     type: string
-    default: 'main'
+    default: "main"
     description: "Branch to deploy documentation from"
-
-# Deployment job
 runs:
   using: "composite"
   steps:
