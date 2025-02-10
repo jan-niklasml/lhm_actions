@@ -74,7 +74,7 @@ runs:
         MVN_ARTIFACT_ID=$(mvn -f .${{inputs.app-path}}/pom.xml org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.artifactId -q -DforceStdout)
         echo $MVN_ARTIFACT_ID
         echo "MVN_ARTIFACT_ID=$MVN_ARTIFACT_ID" >> $GITHUB_OUTPUT
-        mvn release:prepare release:perform -f .${{inputs.app-path}}/pom.xml -B -DreleaseVersion=${{ inputs.releaseVersion }} -DdevelopmentVersion=${{ inputs.developmentVersion }} -Darguments="-Dmaven.deploy.skip=${{ inputs.skipDeployment }}"
+        mvn release:prepare release:perform -f ./${{inputs.app-path}}/pom.xml -B -DreleaseVersion=${{ inputs.releaseVersion }} -DdevelopmentVersion=${{ inputs.developmentVersion }} -Darguments="-Dmaven.deploy.skip=${{ inputs.skipDeployment }}"
       env:
         SIGN_KEY_PASS: ${{ inputs.GPG_PRIVATE_KEY }}
         CENTRAL_USERNAME: ${{ inputs.CENTRAL_USERNAME }}
