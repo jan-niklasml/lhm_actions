@@ -1,5 +1,3 @@
-<!-- add Project Logo, if existing -->
-
 # LHM Actions
 
 [![Made with love by it@M][made-with-love-shield]][itm-opensource]
