@@ -27,7 +27,6 @@ To start with actions read the [GitHub Actions documentation](https://github.com
 
 ## Documentation
 
-_Coming soon:_
 We provide actions to
 
 - Build Maven projects and deploy them to Maven Central
