@@ -8,19 +8,17 @@ This repository contains and provides actions to
 - Create GitHub Releases
 - Build vitepress Documentation and deploy it to GitHub Pages  
 
-
-## action-build-docs
+## Usage
+### action-build-docs
 
 Executes the following steps:
 
 1. Enables GitHub Pages
 2. Build vitepress docs project
 3. Uploads the build output as an artifact.  
-   The uploaded artifact can be used to deploy the docs to a website (see [action-deploy-docs](#action-deploy-docs))
+   The uploaded artifact can be used to deploy the docs to a web page (see [action-deploy-docs](#action-deploy-docs))
 
-### Usage
-
-```
+```yaml
 - uses: it-at-m/lhm_actions/action-templates/actions/action-build-docs@v1.0.0
   with:
       # Path to vitepress docs project
@@ -40,7 +38,7 @@ Executes the following steps:
       dist-path: ".vitepress/dist"
 ```
 
-## action-build-image
+### action-build-image
 
 Executes the following steps:
 
@@ -49,9 +47,7 @@ Executes the following steps:
 3. Extract metadata (tags, labels) for Docker
 4. Build and push image
 
-### Usage
-
-```
+```yaml
 - uses: it-at-m/lhm_actions/action-templates/actions/action-build-docs@v1.0.0
   with:
     # Image registry to push image to
@@ -91,7 +87,7 @@ Executes the following steps:
 
 ### action-create-github-release
 
-## action-deploy-docs
+### action-deploy-docs
 
 ### action-maven-build
 
@@ -100,8 +96,3 @@ Executes the following steps:
 ### action-npm-build
 
 ### action-npm-release
-
-<!-- project shields / links -->
-
-[made-with-love-shield]: https://img.shields.io/badge/made%20with%20%E2%9D%A4%20by-it%40M-yellow?style=for-the-badge
-[itm-opensource]: https://opensource.muenchen.de/
