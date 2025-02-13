@@ -50,35 +50,34 @@ Executes the following steps:
 ```yaml
 - uses: it-at-m/lhm_actions/action-templates/actions/action-build-docs@v1.0.0
   with:
-    # Image registry to push image to
-    # Default: ghcr.io
-    registry: "ghcr.io"
+      # Image registry to push image to
+      # Default: ghcr.io
+      registry: "ghcr.io"
 
-    # Username to authenticate against image registry
-    registry-username: ${{ github.actor }}
+      # Username to authenticate against image registry
+      registry-username: ${{ github.actor }}
     
-    # Password to authenticate against image registry
-    registry-password: ${{ secrets.GITHUB_TOKEN }}
+      # Password to authenticate against image registry
+      registry-password: ${{ secrets.GITHUB_TOKEN }}
     
-    # Tags to tag image with
-    Default: type=raw,value=latest
-    image-tags: |
-      type=raw,value=latest
+      # Tags to tag image with
+      # Default: type=raw,value=latest
+      image-tags: type=raw,value=latest
 
-    # Labels to add to image  
-    # Default: org.opencontainers.image.description=See ${{ github.server_url }}/${{ github.repository }}
-    # Optional
-    image-labels: |
-      org.opencontainers.image.description=See ${{ github.server_url }}/${{ github.repository }}
+      # Labels to add to image  
+      # Default: org.opencontainers.image.description=See ${{ github.server_url }}/${{ github.repository }}
+      # Optional
+      image-labels: |
+          org.opencontainers.image.description=See ${{ github.server_url }}/${{ github.repository }}
     
-    # Path to the Dockerfile to build image from
-    path: ${{ github.event.inputs.app-path }}
+      # Path to the Dockerfile to build image from
+      path: ${{ github.event.inputs.app-path }}
     
-    # Name to give the image
-    image-name: ${{ github.event.inputs.app-path }}
+      # Name to give the image
+      image-name: ${{ github.event.inputs.app-path }}
 
-    # Name of the artifact to download
-    artifact-name: ${{ needs.release-maven.outputs.ARTIFACT_NAME }}
+      # Name of the artifact to download
+      artifact-name: ${{ needs.release-maven.outputs.ARTIFACT_NAME }}
 ```
 
 ### action-checkout
