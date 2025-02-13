@@ -6,10 +6,12 @@ This repository contains and provides actions to
 - Build npm projects and deploy them to npmjs
 - Build Docker images and push them to GitHub Container Registry
 - Create GitHub Releases
-- Build vitepress Documentation and deploy it to GitHub Pages  
+- Build vitepress Documentation and deploy it to GitHub Pages
 
 ## Usage
+
 ### action-build-docs
+
 Executes the following steps:
 
 <!-- prettier-ignore-start -->
