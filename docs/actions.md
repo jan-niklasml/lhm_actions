@@ -260,7 +260,7 @@ Output parameters:
 
 ### action-npm-build
 
-Action to build a Npm project.
+Action to build an npm project.
 
 Executes the following steps:
 
@@ -298,19 +298,17 @@ Outputs:
 
 ### action-npm-release
 
-Action to create a Npm release and deploy it to Node.js.
+Action to create an npm release and deploy it to Node.js.
 
 Executes the following steps:
 
 1. Checkout repository
 2. Setup Node.js version
-3. Bump version and create git tag
-4. Run Npm build
-5. Deploy Npm artifact to Node.js
+3. Bump version and create Git tag
+4. Run npm build
+5. Deploy npm artifact to Node.js
 
 Output parameters:
 
 1. `ARTIFACT_NAME`: Name of artifact
 2. `ARTIFACT_VERSION`: Version of the uploaded artifact
-
-
