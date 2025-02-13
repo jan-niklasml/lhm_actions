@@ -10,33 +10,35 @@ This repository contains and provides actions to
 
 ## Usage
 ### action-build-docs
-
 Executes the following steps:
 
+<!-- prettier-ignore-start -->
 1. Enables GitHub Pages
 2. Build vitepress docs project
-3. Uploads the build output as an artifact.  
+3. Uploads the build output as an artifact.<br/>
    The uploaded artifact can be used to deploy the docs to a web page (see [action-deploy-docs](#action-deploy-docs))
 
 ```yaml
 - uses: it-at-m/lhm_actions/action-templates/actions/action-build-docs@v1.0.0
   with:
-      # Path to vitepress docs project
-      # Default: ./docs
-      docs-path: "./docs"
-      
-      # Node version
-      # Default: 22
-      node-version: "22"
-      
-      # You can change build command, e.g. if using vuepress
-      # Default: build
-      build-cmd: "build"
-      
-      # Vitepress output path that will be uploaded as artifact
-      # Default: .vitepress/dist
-      dist-path: ".vitepress/dist"
+    # Path to vitepress docs project
+    # Default: ./docs
+    docs-path: "./docs"
+
+    # Node version
+    # Default: 22
+    node-version: "22"
+
+    # You can change build command, e.g. if using vuepress
+    # Default: build
+    build-cmd: "build"
+
+    # Vitepress output path that will be uploaded as artifact
+    # Default: .vitepress/dist
+    dist-path: ".vitepress/dist"
 ```
+
+<!-- prettier-ignore-end -->
 
 ### action-build-image
 
@@ -47,38 +49,41 @@ Executes the following steps:
 3. Extract metadata (tags, labels) for Docker
 4. Build and push image
 
+<!-- prettier-ignore-start -->
 ```yaml
 - uses: it-at-m/lhm_actions/action-templates/actions/action-build-docs@v1.0.0
   with:
-      # Image registry to push image to
-      # Default: ghcr.io
-      registry: "ghcr.io"
+    # Image registry to push image to
+    # Default: ghcr.io
+    registry: "ghcr.io"
 
-      # Username to authenticate against image registry
-      registry-username: ${{ github.actor }}
-    
-      # Password to authenticate against image registry
-      registry-password: ${{ secrets.GITHUB_TOKEN }}
-    
-      # Tags to tag image with
-      # Default: type=raw,value=latest
-      image-tags: type=raw,value=latest
+    # Username to authenticate against image registry
+    registry-username: ${{ github.actor }}
 
-      # Labels to add to image  
-      # Default: org.opencontainers.image.description=See ${{ github.server_url }}/${{ github.repository }}
-      # Optional
-      image-labels: |
-          org.opencontainers.image.description=See ${{ github.server_url }}/${{ github.repository }}
-    
-      # Path to the Dockerfile to build image from
-      path: ${{ github.event.inputs.app-path }}
-    
-      # Name to give the image
-      image-name: ${{ github.event.inputs.app-path }}
+    # Password to authenticate against image registry
+    registry-password: ${{ secrets.GITHUB_TOKEN }}
 
-      # Name of the artifact to download
-      artifact-name: ${{ needs.release-maven.outputs.ARTIFACT_NAME }}
+    # Tags to tag image with
+    # Default: type=raw,value=latest
+    image-tags: type=raw,value=latest
+
+    # Labels to add to image  
+    # Default: org.opencontainers.image.description=See ${{ github.server_url }}/${{ github.repository }}
+    # Optional
+    image-labels: |
+      org.opencontainers.image.description=See ${{ github.server_url }}/${{ github.repository }}
+
+    # Path to the Dockerfile to build image from
+    path: ${{ github.event.inputs.app-path }}
+
+    # Name to give the image
+    image-name: ${{ github.event.inputs.app-path }}
+
+    # Name of the artifact to download
+    artifact-name: ${{ needs.release-maven.outputs.ARTIFACT_NAME }}
 ```
+
+<!-- prettier-ignore-end -->
 
 ### action-checkout
 
