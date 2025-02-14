@@ -55,7 +55,7 @@ Executes the following steps:
 
 <!-- prettier-ignore -->
 ```yaml
-- uses: it-at-m/lhm_actions/action-templates/actions/action-build-docs@v1.0.0
+- uses: it-at-m/lhm_actions/action-templates/actions/action-build-image@v1.0.0
   with:
     # Image registry to push image to
     # Default: ghcr.io
