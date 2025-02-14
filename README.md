@@ -6,7 +6,7 @@
 
 This repository contains and provides:
 
-- our global action definitions (see also workflows in /it-at-m/refarch-templates/)
+- our global action definitions (see also workflows in [it-at-m/refarch-templates/](https://github.com/it-at-m/refarch-templates/tree/main/.github/workflows))
 
 ## Built With
 
