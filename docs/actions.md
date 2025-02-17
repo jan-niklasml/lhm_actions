@@ -7,6 +7,7 @@ This repository contains and provides actions to
 - Build Docker images and push them to GitHub Container Registry
 - Create GitHub Releases
 - Build vitepress Documentation and deploy it to GitHub Pages
+- You can use CodeQL to identify vulnerabilities and errors in your code. The results are shown as code scanning alerts in GitHub.
 
 ## Usage
 
