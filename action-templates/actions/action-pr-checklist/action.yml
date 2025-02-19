@@ -1,0 +1,18 @@
+name: Require PR checklist
+
+inputs:
+  fail-missing:
+    required: false
+    default: "true"
+    type: string
+    description: Whether the action should fail if the PR contains no checklist
+
+runs:
+  using: "composite"
+  steps:
+    - name: Configure checklist requirement
+      uses: mheap/require-checklist-action@efef3b1b39d03d12be5ce427c15064f287ba5843 # v2
+      with:
+        requireChecklist: ${{ inputs.fail-missing }}
+        skipDescriptionRegex: .*\(optional\).*
+        skipDescriptionRegexFlags: i
