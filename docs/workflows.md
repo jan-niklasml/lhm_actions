@@ -3,7 +3,7 @@ We use Github-Actions to build our software. The costs are minimal because we us
 
 We designed templates to use github actions. The github action needs permission on the repository for example to create a release or push a tag. Here you can use the automatic token authentication from github. Therefore you can use the access token via ${{ secrets.GITHUB_TOKEN }}. In contrast of the .gitlab-ci.yml  you can create more workflow-files which are independent from each other. The it@M-Templates are arbitrary fit for your project. You can create reuseable actions for single steps.
 
-The templates can be activated under  the tab “actions” with the button “New workflow” . In the software-catalog the templates can be find under the Category “By it@m”.
+The templates can be activated under the "Actions" tab with the "New workflow" button. In the software catalog, the templates can be found under the category "By it@m".
 
 
 - Maven-Node-Build: Executes “mvn install” for Maven projects or “npm run build” for Node.js projects. It selects a free version of OpenJDK and Node.js based on the presence of a pom.xml or package.json in the folder. Specify your subfolders if needed. After the source code is built, a “docker build” is executed, and the resulting Docker image is pushed to GitHub’s internal registry with the tag “latest”. Ensure that the Dockerfile is available in the folder.
