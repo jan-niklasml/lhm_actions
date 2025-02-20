@@ -1,5 +1,4 @@
-Github Actions
-
+# Github Actions
 We use Github-Actions to build our software. The costs are minimal because we use free and public repositories.
 
 We designed templates to use github actions. The github action needs permission on the repository for example to create a release or push a tag. Here you can use the automatic token authentication from github. Therefore you can use the access token via ${{ secrets.GITHUB_TOKEN }}. In contrast of the .gitlab-ci.yml  you can create more workflow-files which are independent from each other. The it@M-Templates are arbitrary fit for your project. You can create reuseable actions for single steps.
