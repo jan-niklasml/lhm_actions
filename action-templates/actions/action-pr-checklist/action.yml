@@ -3,7 +3,7 @@ name: Require PR checklist
 inputs:
   fail-missing:
     required: false
-    default: "true"
+    default: "false"
     type: string
     description: Whether the action should fail if the PR contains no checklist
 
