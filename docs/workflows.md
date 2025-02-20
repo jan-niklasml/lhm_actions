@@ -17,5 +17,5 @@ For the maven-release to work, reference the pom.xml as follows. Replace the pla
   </scm>
 ```
 - Npm-Release: This manual workflow is similar to Maven-Release, but for Node.js projects. It allows you to select the desired version, after which an npm release is performed and a Docker image is created.
--	Deploy docs github pages:  This action is to publish a documentation of vitepress as github pages.
+- Deploy Docs GitHub Pages: This action publishes VitePress-generated documentation as GitHub Pages.
 
