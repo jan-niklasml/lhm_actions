@@ -7,6 +7,8 @@
 
 # Helm Chart
 
+![image](images/external-helm-chart.drawio.png)
+
 There is a sample chart. https://github.com/it-at-m/helm-charts/tree/main/charts/sps-sample . It consists of subcharts. Each subchart is a different module for example frontend, backend, eai.  Each module was created with `helm create` and some adaptions. The Chart.yml includes the external dependency of the apigateway. The main config is done in the values.yml of the parent chart. In the section refarch-gateway, frontend, backend you can set the config of the subchart. 
 
 
@@ -17,6 +19,8 @@ There is a sample chart. https://github.com/it-at-m/helm-charts/tree/main/charts
 At the end of a sprint a developer builds a release in the source code project. It needs to be done for each folder frontend/backend/eai separately. Then the devops engineer needs to update the chart-version and app-version of the helm chart in the Chart.yaml.
 
 Internal the quay syncs the docker images with the external github image registry. The github api has a pull limit so we need to cache the images internally.
+
+![image](images/internal-chart.drawio.png)
 
 The internal gitlab repo you can config your application, for example the trust store, ingress (openshift route), single sign on, database config, environment configs. The most config is comment out, so you need to comment it in. Here you see an example https://git.muenchen.de/ccse/cicd/sps-github
 
