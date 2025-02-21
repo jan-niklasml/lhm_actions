@@ -9,7 +9,7 @@
 
 ![image](images/external-helm-chart.drawio.png)
 
-There is a sample chart. https://github.com/it-at-m/helm-charts/tree/main/charts/sps-sample . It consists of subcharts. Each subchart is a different module for example frontend, backend, eai.  Each module was created with `helm create` and some adaptions. The Chart.yml includes the external dependency of the apigateway. The main config is done in the values.yml of the parent chart. In the section refarch-gateway, frontend, backend you can set the config of the subchart. 
+We provide a sample chart. https://github.com/it-at-m/helm-charts/tree/main/charts/sps-sample, which consists subcharts. Each subchart is a different module for example frontend, backend, eai.  Each module was created with `helm create` and we made some adaptions. The Chart.yml includes the external dependency of the [RefArch Api Gateway Helm Chart](https://github.com/it-at-m/helm-charts/tree/main/charts/refarch-gateway). The main config is done in the values.yml of the parent chart. In the sections refarch-gateway, frontend, backend you can configure the subcharts. 
 
 
 
