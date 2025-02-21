@@ -10,13 +10,12 @@ The templates can be activated under the "Actions" tab with the "New workflow" b
 -	Maven-Release: This is a manual step. Therefore, you need to select in the tab “actions” on the left the workflow “maven-release” and start it over the button “Run workflow” (on top of the table). After that you can select on the pop-up-menu the version in the format x.y.z  and accordingly SNAPSHOT-X.Y.Z. The manual configuration with write rights is not necessary.
 + Maven-Release: This manual workflow requires you to navigate to the “actions” tab on the left and start the “maven-release” workflow using the “Run workflow” button at the top of the table. You can then select the desired version in the x.y.z format, followed by the corresponding SNAPSHOT-x.y.z. Manual configuration of write rights is not required.
 For the maven-release to work, reference the pom.xml as follows. Replace the placeholder variables with the actual values when pushing your artifact to Maven Central.
-```    
+``` xml
 <scm>
         <connection>scm:git:${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git</connection>
         <developerConnection>scm:git:${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git</developerConnection>
       <tag>HEAD</tag>
   </scm>
-```
 - Npm-Release: This manual workflow is similar to Maven-Release, but for Node.js projects. It allows you to select the desired version, after which an npm release is performed and a Docker image is created.
 - Deploy Docs GitHub Pages: This action publishes VitePress-generated documentation as GitHub Pages.
 
