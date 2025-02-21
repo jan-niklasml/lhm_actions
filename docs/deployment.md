@@ -1,6 +1,4 @@
-
-
-
+# Architecture-Overview
 
 ![architecture-overview](images/ci_cd_github_big_picture_public.drawio.png)
 *The picture shows the architecture overview. The steps are explaind in the following passages*
@@ -8,7 +6,6 @@
 # Source Repo
 
 The top left from the architecture-overview is explaint in [link](./workflows.md).
-
 
 # Helm Chart
 
