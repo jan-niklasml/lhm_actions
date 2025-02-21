@@ -28,4 +28,4 @@ The internal gitlab repo you can config your application, for example the trust 
 You have two possibilities for the image rollout. 
 -	For the dev environment, you want to have an auto rollout. We create a image stream. The image stream has a link to the quay. In the deployment there is a special annotation set. Openshift then triggers automatically trigger a new rollout if a new image is available.  https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/images/triggering-updates-on-imagestream-changes#triggering-updates-on-imagestream-changes
 
--	For the test, prod environment, you want to manual rollout. You need to specify the image version for each service in the values.yml.  You need to pay attention that you take the image from the internal quay and not from the github registry.
+-	For the other environment (test, prod), a manual rollout is implemented. You have to specify the image version for each service in the values.yml as well paying attention to use the image from the internal image registry and not from the GitHub Registry.
