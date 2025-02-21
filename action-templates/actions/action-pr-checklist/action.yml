@@ -11,6 +11,7 @@ runs:
   using: "composite"
   steps:
     - name: Configure checklist requirement
+      if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'renovate[bot]' && github.event.pull_request.draft == false }}
       uses: mheap/require-checklist-action@efef3b1b39d03d12be5ce427c15064f287ba5843 # v2
       with:
         requireChecklist: ${{ inputs.fail-missing }}
