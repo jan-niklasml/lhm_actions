@@ -313,3 +313,16 @@ Output parameters:
 
 1. `ARTIFACT_NAME`: Name of artifact
 2. `ARTIFACT_VERSION`: Version of the uploaded artifact
+
+### action-pr-checklist
+
+Action to enforce ticking of all checklist items inside a PR (useful for PR templates)
+
+<!-- prettier-ignore -->
+```yaml
+- uses: it-at-m/lhm_actions/action-templates/actions/action-pr-checklist@v1.0.0
+  with:
+    # Whether the action should fail if the PR contains no checklist
+    # Default: false
+    fail-missing: "false"
+```
