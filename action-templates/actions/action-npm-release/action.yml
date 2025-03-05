@@ -22,6 +22,9 @@ inputs:
     type: string
     required: true
     description: npm token for release
+  ARTIFACT_VERSION:
+    description: version of the artifact upload
+    value: ${{steps.node-release.outputs.VERSION}}
 runs:
   using: "composite"
   steps:
