@@ -16,7 +16,6 @@ outputs:
   python:
     description: "name of the artifact upload"
     value: ${{ steps.filter.outputs.python }}
-# Line 19 in action-templates/actions/action-checkout/action.yml after fix (empty line with no trailing spaces)
 runs:
   using: "composite"
   steps:
