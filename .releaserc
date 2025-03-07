@@ -2,7 +2,6 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     {
-      "preset": "conventionalcommits",
       "releaseRules": [{ "type": "*", "release": "patch" }],
       "parserOpts": {
         "headerPattern": "^(.+)$",
