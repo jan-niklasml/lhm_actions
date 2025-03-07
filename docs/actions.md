@@ -1,7 +1,5 @@
 # LHM Actions
 
-TEST 1234
-
 This repository contains and provides actions to
 
 - Build Maven projects and deploy them to Maven Central
