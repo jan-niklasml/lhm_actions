@@ -3,7 +3,11 @@
     "@semantic-release/commit-analyzer",
     {
       "preset": "conventionalcommits",
-      "releaseRules": [{ "message": "*", "release": "patch" }]
+      "releaseRules": [{ "type": "*", "release": "patch" }],
+      "parserOpts": {
+        "headerPattern": "^(.+)$",
+        "headerCorrespondence": ["type"]
+      }
     },
     "@semantic-release/release-notes-generator",
     "@semantic-release/github"
