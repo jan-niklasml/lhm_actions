@@ -2,6 +2,7 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     {
+      "preset": "angular",
       "releaseRules": [{ "type": "*", "release": "patch" }]
     },
     "@semantic-release/release-notes-generator",
